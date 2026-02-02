@@ -1,0 +1,17 @@
+# Local documentation
+local_docs/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log
+
+# Mac
+__MACOSX/

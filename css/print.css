@@ -1,0 +1,388 @@
+/**
+ * Print Styles
+ * Optimized styles for printing artwork pages
+ */
+
+@media print {
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    /* ============================================
+       HIDE ELEMENTS
+       ============================================ */
+    
+    /* Navigation */
+    header,
+    nav,
+    .breadcrumbs,
+    .skip-to-content,
+    
+    /* Interactive elements */
+    .back-to-top,
+    .nav-arrow,
+    .close-artwork,
+    .zoom-btn,
+    .image-zoom-overlay,
+    .image-zoom-modal,
+    
+    /* Social & Actions */
+    .social-share,
+    .artwork-actions,
+    .cta-button,
+    
+    /* Loading states */
+    .page-loading,
+    .image-loading,
+    .loading-spinner,
+    
+    /* Footer navigation */
+    footer .footer-sections,
+    footer .social-media,
+    
+    /* Similar works (optional - can be printed) */
+    .similar-works {
+        display: none !important;
+    }
+
+    /* ============================================
+       LAYOUT
+       ============================================ */
+    
+    .container {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    main {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* ============================================
+       ARTWORK DETAIL PAGE
+       ============================================ */
+    
+    .artwork-detail {
+        padding: 0;
+    }
+
+    .artwork-detail .container {
+        display: block;
+    }
+
+    /* Image Section */
+    .artwork-image-section {
+        background: none;
+        margin-bottom: 20pt;
+        page-break-inside: avoid;
+    }
+
+    .artwork-image-wrapper {
+        padding-bottom: 0;
+        height: auto;
+    }
+
+    .artwork-image {
+        position: static;
+        width: 100%;
+        max-height: 500pt;
+        object-fit: contain;
+        page-break-inside: avoid;
+    }
+
+    /* Info Section */
+    .artwork-info-section {
+        box-shadow: none;
+        padding: 0;
+        background: none;
+    }
+
+    .artwork-title {
+        font-size: 24pt;
+        margin-bottom: 15pt;
+        border-bottom: 2pt solid #000;
+        padding-bottom: 10pt;
+    }
+
+    .artwork-metadata {
+        border-bottom: 1pt solid #ccc;
+        margin-bottom: 15pt;
+        padding-bottom: 15pt;
+    }
+
+    .metadata-item {
+        margin-bottom: 8pt;
+    }
+
+    .metadata-icon {
+        display: none;
+    }
+
+    .metadata-label {
+        font-weight: bold;
+        display: inline;
+    }
+
+    .metadata-value {
+        display: inline;
+    }
+
+    .metadata-label::after {
+        content: ': ';
+    }
+
+    .artwork-description {
+        margin-bottom: 15pt;
+    }
+
+    .artwork-description p {
+        font-size: 11pt;
+        text-align: justify;
+    }
+
+    /* ============================================
+       GALLERY PAGE
+       ============================================ */
+    
+    .gallery-controls,
+    .gallery-menu,
+    .active-filters,
+    .load-more-container,
+    .gallery-loading,
+    .no-results {
+        display: none !important;
+    }
+
+    .gallery {
+        display: block;
+    }
+
+    .gallery-item {
+        break-inside: avoid;
+        margin-bottom: 20pt;
+        page-break-inside: avoid;
+        border: 1pt solid #ccc;
+    }
+
+    .gallery-item img {
+        max-height: 300pt;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .gallery-item-info {
+        position: static;
+        background: none;
+        color: #000;
+        padding: 10pt;
+        transform: none;
+    }
+
+    .gallery-item-info h3 {
+        color: #000;
+        font-size: 12pt;
+    }
+
+    .gallery-item-info p {
+        color: #333;
+        font-size: 10pt;
+    }
+
+    /* ============================================
+       HOMEPAGE
+       ============================================ */
+    
+    .hero,
+    .hero-slider,
+    .slider-nav,
+    .slider-arrow {
+        display: none !important;
+    }
+
+    .gallery-preview,
+    .about-preview,
+    .contact-preview {
+        page-break-inside: avoid;
+        margin-bottom: 20pt;
+    }
+
+    .featured-works {
+        display: block;
+    }
+
+    .featured-works .gallery-item {
+        margin-bottom: 15pt;
+    }
+
+    /* ============================================
+       ABOUT PAGE
+       ============================================ */
+    
+    .about-content {
+        page-break-inside: avoid;
+    }
+
+    .artist-image-container {
+        page-break-inside: avoid;
+        margin-bottom: 15pt;
+    }
+
+    .artist-image {
+        max-width: 200pt;
+        float: right;
+        margin-left: 15pt;
+        margin-bottom: 15pt;
+    }
+
+    .about-timeline {
+        page-break-inside: avoid;
+        margin-bottom: 15pt;
+    }
+
+    .timeline-item {
+        margin-bottom: 8pt;
+    }
+
+    /* ============================================
+       CONTACT PAGE
+       ============================================ */
+    
+    .contact-info {
+        page-break-inside: avoid;
+    }
+
+    .contact-item {
+        margin-bottom: 10pt;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    
+    footer {
+        border-top: 2pt solid #000;
+        margin-top: 20pt;
+        padding-top: 10pt;
+    }
+
+    footer .container {
+        text-align: center;
+    }
+
+    .copyright {
+        font-size: 9pt;
+        color: #666;
+    }
+
+    /* ============================================
+       LINKS
+       ============================================ */
+    
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    a[href]::after {
+        content: ' (' attr(href) ')';
+        font-size: 9pt;
+        color: #666;
+        word-break: break-all;
+    }
+
+    /* Don't show URLs for internal links */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+        content: '';
+    }
+
+    /* ============================================
+       PAGE BREAKS
+       ============================================ */
+    
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    img {
+        page-break-inside: avoid;
+        max-width: 100% !important;
+    }
+
+    article, section {
+        page-break-inside: avoid;
+    }
+
+    /* ============================================
+       UTILITIES
+       ============================================ */
+    
+    .page-title {
+        background: none;
+        box-shadow: none;
+        padding: 10pt 0;
+        margin-bottom: 15pt;
+    }
+
+    .page-title::before {
+        display: none;
+    }
+
+    .page-title h2 {
+        font-size: 20pt;
+    }
+
+    .page-title h2::after {
+        display: none;
+    }
+
+    /* ============================================
+       TYPOGRAPHY
+       ============================================ */
+    
+    h1 {
+        font-size: 24pt;
+    }
+
+    h2 {
+        font-size: 18pt;
+    }
+
+    h3 {
+        font-size: 14pt;
+    }
+
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+}
+
+/* ============================================
+   PRINT DIALOG OPTIMIZATION
+   ============================================ */
+
+@media print and (color) {
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}

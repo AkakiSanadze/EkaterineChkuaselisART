@@ -1,0 +1,29 @@
+# robots.txt for Ekaterine Chkuaseli's Art Portfolio
+# https://ekaterinechkuaseli.art
+
+# Allow all search engines
+User-agent: *
+
+# Allow access to all content
+Allow: /
+Allow: /gallery.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /artwork.html
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Disallow access to system files
+Disallow: /.htaccess
+Disallow: /plans/
+Disallow: /*.md$
+
+# Crawl-delay for rate limiting (optional)
+# Crawl-delay: 10
+
+# Sitemap location
+Sitemap: https://ekaterinechkuaseli.art/sitemap.xml
+
+# Host preference (non-www)
+Host: https://ekaterinechkuaseli.art

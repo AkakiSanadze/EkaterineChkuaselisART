@@ -3,1014 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekaterine Chkuaseli's Art | Artist</title>
-    <style>
-        /* Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
-        
-        /* Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Raleway', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f8f8;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px 0;
-            margin-bottom: 40px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            cursor: pointer;
-        }
-        
-        .logo h1 {
-            font-size: 28px;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .logo:hover h1 {
-            color: #a67c52;
-        }
-        
-        .logo p {
-            font-size: 16px;
-            color: #666;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
-        }
-        
-        nav ul li a:hover {
-            color: #a67c52;
-        }
-        
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: #a67c52;
-            transition: width 0.3s;
-        }
-        
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-        
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 0;
-            background-color: #fff;
-            margin-bottom: 60px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(to right, #a67c52, #d4b08c, #a67c52);
-            z-index: 2;
-        }
-        
-        .hero-slider {
-            position: relative;
-            height: 550px;
-            overflow: hidden;
-        }
-        
-        .hero-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            background-size: cover;
-            background-position: center;
-            display: block;
-            text-decoration: none;
-            z-index: 0;
-        }
-        
-        /* Predefine background images for each slide */
-        .hero-slide:nth-child(1) {
-            background-image: url('images/still-life.jpg');
-        }
-        .hero-slide:nth-child(2) {
-            background-image: url('images/Untitled.jpg');
-        }
-        .hero-slide:nth-child(3) {
-            background-image: url('images/spring.jpg');
-        }
-        
-        .hero-slide.active {
-            opacity: 1;
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.4);
-            color: #fff;
-            padding: 20px;
-            z-index: 2;
-        }
-        
-        .hero-content h2 {
-            font-size: 42px;
-            margin-bottom: 20px;
-            color: #fff;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        .hero-content p {
-            font-size: 18px;
-            color: #fff;
-            max-width: 800px;
-            margin: 0 auto;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-        }
-        
-        .slider-nav {
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            z-index: 2;
-        }
-        
-        .slider-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .slider-dot.active {
-            background-color: #fff;
-        }
-        
-        .slider-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            z-index: 2;
-            transition: background-color 0.3s;
-        }
-        
-        .slider-arrow:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-        
-        .slider-arrow.prev {
-            left: 20px;
-        }
-        
-        .slider-arrow.next {
-            right: 20px;
-        }
-        
-        .slider-arrow::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-top: 2px solid #fff;
-            border-right: 2px solid #fff;
-            display: block;
-        }
-        
-        .slider-arrow.prev::before {
-            transform: rotate(-135deg);
-        }
-        
-        .slider-arrow.next::before {
-            transform: rotate(45deg);
-        }
-        
-        /* Gallery Preview */
-        .gallery-preview {
-            text-align: center;
-            padding: 60px 0;
-            background-color: #fff;
-        }
-        
-        .gallery-preview h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .gallery-preview p {
-            color: #666;
-            margin-bottom: 40px;
-        }
-        
-        .featured-works {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .featured-work-item {
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-            aspect-ratio: 3/4;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        .featured-work-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .featured-work-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s;
-        }
-        
-        .featured-work-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        .featured-work-item .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 15px;
-            transform: translateY(100%);
-            transition: transform 0.3s;
-        }
-        
-        .featured-work-item:hover .overlay {
-            transform: translateY(0);
-        }
-        
-        .featured-work-item .overlay h3 {
-            font-size: 18px;
-            margin-bottom: 5px;
-            color: #333;
-        }
-        
-        .featured-work-item .overlay p {
-            font-size: 14px;
-            color: #666;
-            margin: 0;
-        }
-        
-        .view-more-btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #a67c52;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 25px;
-            transition: background-color 0.3s;
-        }
-        
-        .view-more-btn:hover {
-            background-color: #8b6642;
-        }
-        
-        /* About Preview */
-        .about-preview {
-            display: flex;
-            align-items: center;
-            padding: 80px 0;
-            background-color: #fff;
-            margin-bottom: 60px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: relative;
-        }
-        
-        .about-preview::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.7) 100%);
-            z-index: 1;
-        }
-        
-        .about-preview::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://ekaterinechkuaseli.wordpress.com/wp-content/uploads/2024/02/dancer-ink-22x31cm-3.jpg?w=728');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.1;
-            z-index: 0;
-        }
-        
-        .about-preview-content {
-            flex: 1;
-            padding: 0 30px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .about-preview-content h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .about-preview-content h2::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background-color: #a67c52;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .about-preview-content p {
-            margin-bottom: 25px;
-            font-size: 17px;
-        }
-        
-        /* Contact Preview */
-        .contact-preview {
-            background-color: #fff;
-            padding: 80px 0;
-            margin-bottom: 60px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-        
-        .contact-preview h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .contact-preview h2::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background-color: #a67c52;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .contact-preview p {
-            max-width: 700px;
-            margin: 0 auto 40px;
-            font-size: 17px;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 60px 0 30px;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .footer-sections {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin-bottom: 40px;
-            text-align: left;
-            flex-wrap: wrap;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 200px;
-            margin: 0 15px 30px;
-        }
-        
-        .footer-section h4 {
-            color: #d4b08c;
-            font-size: 18px;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .footer-section h4::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 2px;
-            background-color: #a67c52;
-            bottom: -8px;
-            left: 0;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-links a, .footer-contact a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 15px;
-        }
-        
-        .footer-links a:hover, .footer-contact a:hover {
-            color: #a67c52;
-        }
-        
-        .footer-contact {
-            color: #ccc;
-            margin-bottom: 12px;
-            font-size: 15px;
-        }
-        
-        .copyright {
-            font-size: 14px;
-            color: #999;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            width: 100%;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            nav ul {
-                margin-top: 20px;
-            }
-            
-            nav ul li {
-                margin: 0 10px;
-            }
-            
-            .about-preview {
-                flex-direction: column;
-            }
-            
-            .about-preview-content {
-                padding: 20px;
-            }
-            
-            .hero h2 {
-                font-size: 32px;
-            }
-        }
-    </style>
+    <title>Ekaterine Chkuaseli's Art | Contemporary Artist from Georgia</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover the contemporary artwork of Ekaterine Chkuaseli, a Georgian artist specializing in oil paintings, ink drawings, and mixed media. Explore a collection of 70+ original artworks.">
+    <meta name="keywords" content="Ekaterine Chkuaseli, Georgian artist, contemporary art, oil paintings, ink drawings, mixed media, Tbilisi artist, fine art, original artwork">
+    <meta name="author" content="Ekaterine Chkuaseli">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ekaterinechkuaseli.art/">
+    
+    <!-- Alternate Language Versions -->
+    <link rel="alternate" hreflang="en" href="https://ekaterinechkuaseli.art/">
+    <link rel="alternate" hreflang="ka" href="https://ekaterinechkuaseli.art/index-ka.html">
+    <link rel="alternate" hreflang="ru" href="https://ekaterinechkuaseli.art/index-ru.html">
+    <link rel="alternate" hreflang="x-default" href="https://ekaterinechkuaseli.art/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Ekaterine Chkuaseli's Art | Contemporary Artist from Georgia">
+    <meta property="og:description" content="Discover the contemporary artwork of Ekaterine Chkuaseli, a Georgian artist specializing in oil paintings, ink drawings, and mixed media. Explore a collection of 70+ original artworks.">
+    <meta property="og:image" content="https://ekaterinechkuaseli.art/images/EkaterineChkuaseli.jpg">
+    <meta property="og:url" content="https://ekaterinechkuaseli.art/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ekaterine Chkuaseli's Art">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ekaterine Chkuaseli's Art | Contemporary Artist from Georgia">
+    <meta name="twitter:description" content="Discover the contemporary artwork of Ekaterine Chkuaseli, a Georgian artist specializing in oil paintings, ink drawings, and mixed media. Explore a collection of 70+ original artworks.">
+    <meta name="twitter:image" content="https://ekaterinechkuaseli.art/images/EkaterineChkuaseli.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
     <!-- Header -->
-    <header>
+    <header role="banner">
         <div class="container">
             <div class="header-content">
-                <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+                <a href="index.html" class="logo" aria-label="Ekaterine Chkuaseli's Art - Home">
                     <h1>Ekaterine Chkuaseli's Art</h1>
                     <p>Artist • Tbilisi, Georgia</p>
                 </a>
-                <nav>
+                <nav role="navigation" aria-label="Main navigation">
                     <ul>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
+                <!-- Language Switcher -->
+                <div class="language-switcher" aria-label="Language selection">
+                    <a href="index.html" class="lang-btn active" data-lang="en" aria-label="English" aria-current="true">EN</a>
+                    <span class="lang-separator">|</span>
+                    <a href="index-ka.html" class="lang-btn" data-lang="ka" aria-label="Georgian">GE</a>
+                    <span class="lang-separator">|</span>
+                    <a href="index-ru.html" class="lang-btn" data-lang="ru" aria-label="Russian">RU</a>
+                </div>
             </div>
         </div>
     </header>
-    <!-- Featured Works Section -->
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-slider">
-            <a href="gallery.html" class="hero-slide active"></a>
-            <a href="gallery.html" class="hero-slide"></a>
-            <a href="gallery.html" class="hero-slide"></a>
-            
-            <div class="hero-content">
-                <h2>Thoughts, Colors and Lines</h2>
-                <p>A world of contemporary art reflecting emotions, stories, and human experiences</p>
-            </div>
-            
-            <div class="slider-nav">
-                <div class="slider-dot active"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
-            </div>
-            
-            <div class="slider-arrow prev"></div>
-            <div class="slider-arrow next"></div>
-        </div>
-    </section>
     
-    <!-- Gallery Preview -->
-    <section class="gallery-preview container">
-        <h2>Featured Works</h2>
-        <p>A selection of my recent artwork</p>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-label="Featured artwork slideshow">
+            <div class="hero-slider" role="region" aria-roledescription="carousel" aria-label="Featured artworks">
+                <!-- Slides will be populated dynamically from JSON -->
+                
+                <div class="hero-content">
+                    <h2>Thoughts, Colors and Lines</h2>
+                    <p>A world of contemporary art reflecting emotions, stories, and human experiences</p>
+                </div>
+                
+                <div class="slider-nav" role="tablist" aria-label="Slide navigation">
+                    <!-- Dots will be populated dynamically from JSON -->
+                </div>
+                
+                <button class="slider-arrow prev" aria-label="Previous slide">
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="slider-arrow next" aria-label="Next slide">
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+        </section>
         
-        <div class="featured-works">
-            <!-- Works will be populated dynamically via JavaScript -->
-        </div>
-        
-        <a href="gallery.html" class="view-more-btn">View Gallery</a>
-    </section>
-    
-    <!-- About Preview -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-preview-content">
-                <h2>About</h2>
-                <p>An artist from Tbilisi, Georgia.</p>
-                <p>The artist's work is a journey through the world of colors and forms, where each painting reflects emotions, feelings, and life experiences.</p>
-                <a href="about.html" class="view-more-btn">Learn More</a>
+        <!-- Gallery Preview -->
+        <section class="gallery-preview container" aria-labelledby="featured-works-heading">
+            <h2 id="featured-works-heading">Featured Works</h2>
+            
+            <div class="featured-works" role="list">
+                <!-- Works will be populated dynamically via JavaScript -->
             </div>
-        </div>
-    </section>
+            
+            <a href="gallery.html" class="view-more-btn">View Gallery</a>
+        </section>
+        
+        <!-- About Preview -->
+        <section class="about-preview" aria-labelledby="about-preview-heading">
+            <div class="container">
+                <div class="about-preview-content">
+                    <h2 id="about-preview-heading">About</h2>
+                    <p>An artist from Tbilisi, Georgia.</p>
+                    <p>The artist's work is a journey through the world of colors and forms, where each painting reflects emotions, feelings, and life experiences.</p>
+                    <a href="about.html" class="view-more-btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Preview -->
+        <section class="contact-preview" aria-labelledby="contact-preview-heading">
+            <div class="container">
+                <h2 id="contact-preview-heading">Get in Touch</h2>
+                <p>Interested in the artwork? Have questions or want to discuss a commission?</p>
+                <a href="contact.html" class="view-more-btn">Contact</a>
+            </div>
+        </section>
+    </main>
     
-    <!-- Contact Preview -->
-    <section class="contact-preview">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p>Interested in the artwork? Have questions or want to discuss a commission?</p>
-            <a href="contact.html" class="view-more-btn">Contact</a>
-        </div>
-    </section>
-    
-<!-- Footer -->     
-<footer>         
-    <div class="container">             
-        <div class="footer-content">                 
-            <div class="footer-sections">                     
-                <div class="footer-section">                         
-                    <h4>Navigation</h4>                         
-                    <ul class="footer-links">                             
-                        <li><a href="index.html">Home</a></li>                             
-                        <li><a href="gallery.html">Gallery</a></li>                             
-                        <li><a href="about.html">About</a></li>                             
-                        <li><a href="contact.html">Contact</a></li>                         
-                    </ul>                     
-                </div>                     
-                <div class="footer-section">                         
-                    <h4>Contact</h4>                         
-                    <p class="footer-contact">Tbilisi, Georgia</p>                         
-                    <p class="footer-contact"><a href="contact.html">Send a message</a></p>
-                    <!-- Social Media Buttons -->
-                    <div class="social-media">
-                        <a href="#" class="social-icon" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Pinterest">
-                            <i class="fab fa-pinterest-p"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Behance">
-                            <i class="fab fa-behance"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>                     
-                <div class="footer-section">                         
-                    <h4>Art Categories</h4>                         
-                    <ul class="footer-links">                             
-                        <li><a href="gallery.html?filter=oil">Oil Paintings</a></li>                             
-                        <li><a href="gallery.html?filter=ink">Ink Drawings</a></li>                             
-                        <li><a href="gallery.html?filter=pastel">Pastel Drawings</a></li>
-                        <li><a href="gallery.html?filter=mixed">Mixed Media</a></li>                         
-                    </ul>                     
+    <!-- Footer -->     
+    <footer role="contentinfo">         
+        <div class="container">             
+            <div class="footer-content">                 
+                <div class="footer-sections">                     
+                    <div class="footer-section">                         
+                        <h4>Navigation</h4>                         
+                        <ul class="footer-links">                             
+                            <li><a href="index.html" aria-current="page">Home</a></li>                             
+                            <li><a href="gallery.html">Gallery</a></li>                             
+                            <li><a href="about.html">About</a></li>                             
+                            <li><a href="contact.html">Contact</a></li>                         
+                        </ul>                     
+                    </div>                     
+                    <div class="footer-section">                         
+                        <h4>Contact</h4>                         
+                        <p class="footer-contact">Tbilisi, Georgia</p>                         
+                        <p class="footer-contact"><a href="mailto:chkuaseli.eka@gmail.com">chkuaseli.eka@gmail.com</a></p>
+                    </div>                     
+                    <div class="footer-section">                         
+                        <h4>Art Categories</h4>                         
+                        <ul class="footer-links">                             
+                            <li><a href="gallery.html?filter=oil">Oil Paintings</a></li>                             
+                            <li><a href="gallery.html?filter=ink">Ink Drawings</a></li>
+                            <li><a href="gallery.html?filter=pastel">Pastel Drawings</a></li>
+                            <li><a href="gallery.html?filter=mixed">Mixed Media</a></li>                         
+                        </ul>                     
+                    </div>                 
                 </div>                 
-            </div>                 
-            <div class="copyright">                     
-                © 2025 Ekaterine Chkuaseli's Art. All rights reserved.                 
-            </div>             
-        </div>         
-    </div>     
-</footer>
-
-<!-- Add Font Awesome for social icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<!-- CSS styles for social media icons -->
-<style>
-    /* Footer Styles */
-    footer {
-        background-color: #2a2a2a;
-        color: #ffffff;
-        padding: 50px 0 30px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+                <div class="copyright">                     
+                    © 2025 Ekaterine Chkuaseli's Art. All rights reserved.                 
+                </div>             
+            </div>         
+        </div>     
+    </footer>
     
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Data Files -->
+    <script src="data/slider.js"></script>
+    <script src="data/artworks.js"></script>
     
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .footer-sections {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 40px;
-    }
-    
-    .footer-section {
-        flex: 1;
-        min-width: 200px;
-    }
-    
-    .footer-section h4 {
-        color: #ffffff;
-        font-size: 18px;
-        margin-bottom: 20px;
-        position: relative;
-        padding-bottom: 10px;
-    }
-    
-    .footer-section h4::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 40px;
-        height: 2px;
-        background-color: #a08b6c;
-    }
-    
-    .footer-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .footer-links li {
-        margin-bottom: 10px;
-    }
-    
-    .footer-links a, 
-    .footer-contact a {
-        color: #cccccc;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    
-    .footer-links a:hover, 
-    .footer-contact a:hover {
-        color: #a08b6c;
-    }
-    
-    .footer-contact {
-        color: #cccccc;
-        margin-bottom: 10px;
-    }
-    
-    .copyright {
-        text-align: center;
-        padding-top: 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        color: #999999;
-        font-size: 14px;
-    }
-    
-    /* Social Media Icons */
-    .social-media {
-        display: flex;
-        gap: 15px;
-        margin-top: 20px;
-    }
-    
-    .social-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 36px;
-        height: 36px;
-        background-color: rgba(255, 255, 255, 0.07);
-        border-radius: 50%;
-        color: #ffffff;
-        font-size: 16px;
-        transition: all 0.3s ease;
-    }
-    
-    .social-icon:hover {
-        background-color: #a08b6c;
-        color: #ffffff;
-        transform: translateY(-3px);
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .footer-sections {
-            flex-direction: column;
-            gap: 30px;
-        }
-        
-        .footer-section {
-            width: 100%;
-        }
-    }
-</style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // All available artworks
-            const allArtworks = [
-                { src: 'images/Still Life.jpg', title: 'Still Life', medium: 'Oil on Canvas' },
-                { src: 'images/Untitled.jpg', title: 'Untitled', medium: 'Mixed Media' },
-                { src: 'images/spring.jpg', title: 'Spring', medium: 'Oil on Canvas' },
-                { src: 'images/Winter1.jpg', title: 'Winter', medium: 'Oil on Canvas' },
-                { src: 'images/Thought.jpg', title: 'Thought', medium: 'Mixed Media' },
-                { src: 'images/Tree.jpg', title: 'Tree', medium: 'Oil on Canvas' },
-                { src: 'images/Cuca.jpg', title: 'Cuca', medium: 'Mixed Media' },
-                { src: 'images/Hedgehog.jpg', title: 'Hedgehog', medium: 'Oil on Canvas' },
-                { src: 'images/Jester.jpg', title: 'Jester', medium: 'Mixed Media' },
-                { src: 'images/folk-instruments.jpg', title: 'Folk Instruments', medium: 'Oil on Canvas' },
-                { src: 'images/the-flowers.jpg', title: 'The Flowers', medium: 'Oil on Canvas' },
-                { src: 'images/with-crane.jpg', title: 'With Crane', medium: 'Mixed Media' },
-                { src: 'images/Dream.jpg', title: 'Dream', medium: 'Oil on Canvas' },
-                { src: 'images/blindly-spring.jpg', title: 'Blindly Spring', medium: 'Mixed Media' },
-                { src: 'images/the-bird.jpg', title: 'The Bird', medium: 'Oil on Canvas' },
-                { src: 'images/We.jpg', title: 'We', medium: 'Mixed Media' },
-                { src: 'images/My-Green-Space.jpg', title: 'My Green Space', medium: 'Oil on Canvas' },
-                { src: 'images/Flowers.jpg', title: 'Flowers', medium: 'Mixed Media' },
-                { src: 'images/winter.jpg', title: 'Winter', medium: 'Oil on Canvas' },
-                { src: 'images/walking.jpg', title: 'Walking', medium: 'Mixed Media' },
-                { src: 'images/walk-in-forest.jpg', title: 'Walk in Forest', medium: 'Oil on Canvas' },
-                { src: 'images/untitled_1.jpg', title: 'Untitled', medium: 'Mixed Media' },
-                { src: 'images/tojina.jpg', title: 'Tojina', medium: 'Mixed Media' },
-                { src: 'images/summer.jpg', title: 'Summer', medium: 'Oil on Canvas' },
-                { src: 'images/still-life2.jpg', title: 'Still Life II', medium: 'Oil on Canvas' },
-                { src: 'images/still-life-moxatuli-chaidani.jpg', title: 'Still Life with Painted Teapot', medium: 'Oil on Canvas' },
-                { src: 'images/still-life-moscow-private-collection.jpg', title: 'Still Life (Moscow Private Collection)', medium: 'Oil on Canvas' },
-                { src: 'images/spring oil on canvas.jpg', title: 'Spring', medium: 'Oil on Canvas' },
-                { src: 'images/sheep.jpg', title: 'Sheep', medium: 'Mixed Media' },
-                { src: 'images/sail.jpg', title: 'Sail', medium: 'Oil on Canvas' },
-                { src: 'images/masquerade.jpg', title: 'Masquerade', medium: 'Mixed Media' },
-                { src: 'images/marionette.jpg', title: 'Marionette', medium: 'Mixed Media' },
-                { src: 'images/landscape.jpg', title: 'Landscape', medium: 'Oil on Canvas' },
-                { src: 'images/in-boath.jpg', title: 'In Boat', medium: 'Oil on Canvas' },
-                { src: 'images/home-tbilisi-private-collection.jpg', title: 'Home (Tbilisi Private Collection)', medium: 'Oil on Canvas' },
-                { src: 'images/grandfathers-cat.jpg', title: 'Grandfather\'s Cat', medium: 'Mixed Media' },
-                { src: 'images/girl bird oil on canvas.jpg', title: 'Girl with Bird', medium: 'Oil on Canvas' },
-                { src: 'images/freeze oil on canvas.jpg', title: 'Freeze', medium: 'Oil on Canvas' },
-                { src: 'images/free-fall.jpg', title: 'Free Fall', medium: 'Mixed Media' },
-                { src: 'images/fisherman.jpg', title: 'Fisherman', medium: 'Oil on Canvas' },
-                { src: 'images/everything.jpg', title: 'Everything', medium: 'Mixed Media' },
-                { src: 'images/doll-1.jpg', title: 'Doll I', medium: 'Mixed Media' },
-                { src: 'images/doll-2.jpg', title: 'Doll II', medium: 'Mixed Media' },
-                { src: 'images/doll-3.jpg', title: 'Doll III', medium: 'Mixed Media' },
-                { src: 'images/doll-4.jpg', title: 'Doll IV', medium: 'Mixed Media' },
-                { src: 'images/doll-5.jpg', title: 'Doll V', medium: 'Mixed Media' },
-                { src: 'images/doll-6.jpg', title: 'Doll VI', medium: 'Mixed Media' },
-                { src: 'images/dancer.jpg', title: 'Dancer', medium: 'Mixed Media' },
-                { src: 'images/dance.jpg', title: 'Dance', medium: 'Mixed Media' },
-                { src: 'images/black-white.jpg', title: 'Black & White', medium: 'Mixed Media' },
-                { src: 'images/angel.jpg', title: 'Angel', medium: 'Mixed Media' },
-                { src: 'images/a dancer in a black dress.jpg', title: 'Dancer in a Black Dress', medium: 'Mixed Media' },
-                { src: 'images/Zebra.jpg', title: 'Zebra', medium: 'Mixed Media' },
-                { src: 'images/With_Aquarium.jpg', title: 'With Aquarium', medium: 'Oil on Canvas' },
-                { src: 'images/Toyfish.jpg', title: 'Toy Fish', medium: 'Mixed Media' },
-                { src: 'images/Town.jpg', title: 'Town', medium: 'Oil on Canvas' },
-                { src: 'images/Story.jpg', title: 'Story', medium: 'Mixed Media' },
-                { src: 'images/Still-life-orange.jpg', title: 'Still Life with Orange', medium: 'Oil on Canvas' },
-                { src: 'images/Sparrow.jpg', title: 'Sparrow', medium: 'Mixed Media' },
-                { src: 'images/One-two-three.jpg', title: 'One Two Three', medium: 'Mixed Media' },
-                { src: 'images/One-two-three-four.jpg', title: 'One Two Three Four', medium: 'Mixed Media' },
-                { src: 'images/Missing.jpg', title: 'Missing', medium: 'Mixed Media' },
-                { src: 'images/In-City.jpg', title: 'In City', medium: 'Oil on Canvas' },
-                { src: 'images/Ginger Color.jpg', title: 'Ginger Color', medium: 'Mixed Media' },
-                { src: 'images/Bringing-to-you.jpg', title: 'Bringing to You', medium: 'Mixed Media' },
-                { src: 'images/Bottles.jpg', title: 'Bottles', medium: 'Oil on Canvas' },
-                { src: 'images/Autumn .jpg', title: 'Autumn', medium: 'Oil on Canvas' },
-                { src: 'images/A walk with the lambs.jpg', title: 'A Walk with the Lambs', medium: 'Oil on Canvas' }
-            ];
-
-            // Function to shuffle array
-            function shuffleArray(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-                return array;
-            }
-
-            // Get random artworks
-            function getRandomArtworks(count) {
-                const shuffled = shuffleArray([...allArtworks]);
-                return shuffled.slice(0, count);
-            }
-
-            // Populate featured works
-            function populateFeaturedWorks() {
-                const featuredWorksContainer = document.querySelector('.featured-works');
-                const randomArtworks = getRandomArtworks(9);
-
-                featuredWorksContainer.innerHTML = randomArtworks.map(artwork => `
-                    <a href="gallery.html" class="featured-work-item">
-                        <img src="${artwork.src}" alt="${artwork.title}">
-                        <div class="overlay">
-                            <h3>${artwork.title}</h3>
-                            <p>${artwork.medium}</p>
-                        </div>
-                    </a>
-                `).join('');
-            }
-
-            // Initial population
-            populateFeaturedWorks();
-
-            // Slider functionality
-            const slides = document.querySelectorAll('.hero-slide');
-            const dots = document.querySelectorAll('.slider-dot');
-            const prevArrow = document.querySelector('.slider-arrow.prev');
-            const nextArrow = document.querySelector('.slider-arrow.next');
-            const heroContent = document.querySelector('.hero-content');
-            let currentSlide = 0;
-            let slideInterval;
-
-            // Function to show a specific slide
-            function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
-                dots.forEach(dot => dot.classList.remove('active'));
-                
-                slides[index].classList.add('active');
-                dots[index].classList.add('active');
-                
-                currentSlide = index;
-            }
-
-            function nextSlide() {
-                let next = currentSlide + 1;
-                if (next >= slides.length) {
-                    next = 0;
-                }
-                showSlide(next);
-            }
-
-            function prevSlide() {
-                let prev = currentSlide - 1;
-                if (prev < 0) {
-                    prev = slides.length - 1;
-                }
-                showSlide(prev);
-            }
-
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    showSlide(index);
-                    resetInterval();
-                });
-            });
-
-            if (prevArrow) {
-                prevArrow.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    prevSlide();
-                    resetInterval();
-                });
-            }
-
-            if (nextArrow) {
-                nextArrow.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    nextSlide();
-                    resetInterval();
-                });
-            }
-
-            if (heroContent) {
-                heroContent.addEventListener('click', (e) => {
-                    e.preventDefault();
-                });
-            }
-
-            function startSlideshow() {
-                slideInterval = setInterval(nextSlide, 5000);
-            }
-
-            function resetInterval() {
-                clearInterval(slideInterval);
-                startSlideshow();
-            }
-
-            startSlideshow();
-        });
-    </script>
+    <!-- JavaScript Files -->
+    <script src="js/utils.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/featured-works.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

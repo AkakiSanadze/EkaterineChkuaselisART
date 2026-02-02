@@ -1,0 +1,237 @@
+/**
+ * About Page Styles
+ * This file contains styles for the about page and about preview section
+ */
+
+/* ============================================
+   ABOUT PREVIEW (Homepage)
+   ============================================ */
+
+.about-preview {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-7xl) 0;
+    background-color: var(--color-white);
+    margin-bottom: var(--spacing-6xl);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.about-preview::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.7) 100%);
+    z-index: 1;
+}
+
+.about-preview::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://ekaterinechkuaseli.wordpress.com/wp-content/uploads/2024/02/dancer-ink-22x31cm-3.jpg?w=728');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.about-preview-content {
+    flex: 1;
+    padding: 0 var(--spacing-3xl);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.about-preview-content h2 {
+    font-size: var(--font-size-6xl);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    display: inline-block;
+}
+
+.about-preview-content h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-preview-content p {
+    margin-bottom: var(--spacing-2xl);
+    font-size: var(--font-size-md);
+}
+
+/* ============================================
+   ABOUT PAGE SECTION
+   ============================================ */
+
+.about {
+    padding: var(--spacing-6xl) 0;
+    background-color: var(--color-white);
+    margin-bottom: var(--spacing-6xl);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.7) 100%);
+    z-index: 1;
+}
+
+.about::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background-pattern.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-3xl);
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.about-content h2 {
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-3xl);
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-content h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-content p {
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--font-size-md);
+}
+
+/* ============================================
+   ARTIST IMAGE
+   ============================================ */
+
+.artist-image-container {
+    float: right;
+    margin: var(--spacing-3xl) 0 var(--spacing-3xl) var(--spacing-3xl);
+    width: 300px;
+    position: relative;
+    z-index: 3;
+    clear: right;
+}
+
+.artist-image {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    border: 5px solid var(--color-white);
+}
+
+.artist-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.artist-caption {
+    text-align: center;
+    margin-top: var(--spacing-md);
+    font-style: italic;
+    color: var(--color-text-light);
+    font-size: var(--font-size-xs);
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+
+.about-timeline {
+    margin-top: var(--spacing-4xl);
+    position: relative;
+}
+
+.about-timeline h3 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-primary);
+    position: relative;
+    display: inline-block;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: var(--spacing-3xl);
+    margin-bottom: var(--spacing-xl);
+    transition: transform var(--transition-fast);
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-primary);
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.2);
+    background-color: var(--color-primary-dark);
+}
+
+.timeline-year {
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.collections {
+    margin-top: var(--spacing-xl);
+    font-style: italic;
+}

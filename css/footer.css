@@ -1,0 +1,136 @@
+/**
+ * Footer Styles
+ * This file contains styles for the site footer
+ */
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+    background-color: var(--color-footer-bg-alt);
+    color: var(--color-white);
+    padding: 50px 0 30px;
+    font-family: var(--font-family-secondary);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3xl);
+}
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--spacing-4xl);
+    width: 100%;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-section h4 {
+    color: var(--color-white);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    padding-bottom: var(--spacing-md);
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-accent);
+}
+
+/* ============================================
+   FOOTER LINKS
+   ============================================ */
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: var(--spacing-md);
+}
+
+.footer-links a,
+.footer-contact a {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: color var(--transition-fast) ease;
+    font-size: var(--font-size-sm);
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--color-accent);
+}
+
+.footer-contact {
+    color: var(--color-footer-text);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-sm);
+}
+
+/* ============================================
+   SOCIAL MEDIA ICONS
+   ============================================ */
+
+.social-media {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-full);
+    color: var(--color-white);
+    font-size: var(--font-size-base);
+    transition: all var(--transition-fast) ease;
+}
+
+.social-icon:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    transform: translateY(-3px);
+}
+
+.social-icon:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+    background-color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   COPYRIGHT
+   ============================================ */
+
+.copyright {
+    text-align: center;
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-footer-border);
+    color: var(--color-footer-text-light);
+    font-size: var(--font-size-xs);
+    width: 100%;
+}

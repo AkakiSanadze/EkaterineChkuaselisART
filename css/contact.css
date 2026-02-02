@@ -1,0 +1,172 @@
+/**
+ * Contact Page Styles
+ * This file contains styles for the contact page and contact preview section
+ */
+
+/* ============================================
+   CONTACT PREVIEW (Homepage)
+   ============================================ */
+
+.contact-preview {
+    background-color: var(--color-white);
+    padding: var(--spacing-7xl) 0;
+    margin-bottom: var(--spacing-6xl);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.contact-preview h2 {
+    font-size: var(--font-size-6xl);
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    display: inline-block;
+}
+
+.contact-preview h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-preview p {
+    max-width: 700px;
+    margin: 0 auto var(--spacing-4xl);
+    font-size: var(--font-size-md);
+}
+
+/* ============================================
+   CONTACT PAGE SECTION
+   ============================================ */
+
+.contact {
+    background-color: var(--color-white);
+    padding: var(--spacing-6xl) 0;
+    margin-bottom: var(--spacing-6xl);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    position: relative;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.7) 100%);
+    z-index: 1;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://ekaterinechkuaseli.wordpress.com/wp-content/uploads/2024/02/dancer-ink-22x31cm-3.jpg?w=728');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.contact-text {
+    max-width: 700px;
+    margin: 0 auto var(--spacing-4xl);
+    font-size: var(--font-size-lg);
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================
+   CONTACT INFO
+   ============================================ */
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-4xl);
+    margin: var(--spacing-4xl) 0;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-4xl);
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-hover);
+    transition: all var(--transition-fast);
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-card);
+}
+
+.contact-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.contact-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.contact-item i {
+    font-size: 40px;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-primary);
+}
+
+.contact-item h3 {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text);
+}
+
+.contact-item p {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+}
+
+/* ============================================
+   EMAIL LINK STYLE
+   ============================================ */
+
+.contact-item a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast), border-bottom var(--transition-fast);
+    border-bottom: 1px solid transparent;
+}
+
+.contact-item a:hover {
+    color: var(--color-primary-dark);
+    border-bottom: 1px solid var(--color-primary-dark);
+}

@@ -1,0 +1,177 @@
+/**
+ * Responsive Design Styles
+ * This file contains media queries for responsive design
+ */
+
+/* ============================================
+   TABLET AND SMALLER (max-width: 768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Header */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: var(--spacing-xl);
+    }
+    
+    nav ul li {
+        margin: 0 var(--spacing-md);
+    }
+    
+    /* Page Title */
+    .page-title h2 {
+        font-size: var(--font-size-5xl);
+    }
+    
+    /* Hero */
+    .hero-content h2 {
+        font-size: var(--font-size-5xl);
+    }
+    
+    .hero-slider {
+        height: 400px;
+    }
+    
+    /* About Preview */
+    .about-preview {
+        flex-direction: column;
+    }
+    
+    .about-preview-content {
+        padding: var(--spacing-xl);
+    }
+    
+    .about-preview-content h2 {
+        font-size: var(--font-size-5xl);
+    }
+    
+    /* About Page */
+    .about-content {
+        padding: var(--spacing-xl);
+    }
+    
+    .artist-image-container {
+        float: none;
+        margin: 0 auto var(--spacing-3xl);
+        width: 80%;
+        max-width: 300px;
+    }
+    
+    /* Contact */
+    .contact-item {
+        width: 100%;
+        padding: var(--spacing-3xl);
+    }
+    
+    /* Gallery Menu */
+    .gallery-menu button {
+        padding: 10px 20px;
+        margin: 0 var(--spacing-xs) var(--spacing-md);
+        font-size: var(--font-size-sm);
+    }
+    
+    /* Gallery Grid */
+    .gallery,
+    .featured-works {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: var(--spacing-xl);
+    }
+    
+    /* Footer */
+    .footer-sections {
+        flex-direction: column;
+        gap: var(--spacing-3xl);
+    }
+    
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .footer-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-media {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   MOBILE (max-width: 480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+    /* Typography */
+    .page-title h2 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .hero-content h2 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero-content p {
+        font-size: var(--font-size-base);
+    }
+    
+    .about-preview-content h2,
+    .contact-preview h2 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    /* Gallery */
+    .gallery,
+    .featured-works {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-menu button {
+        padding: 8px 15px;
+        font-size: var(--font-size-xs);
+    }
+    
+    /* Hero Slider */
+    .hero-slider {
+        height: 300px;
+    }
+    
+    .slider-arrow {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .slider-arrow.prev {
+        left: var(--spacing-md);
+    }
+    
+    .slider-arrow.next {
+        right: var(--spacing-md);
+    }
+    
+    /* Contact */
+    .contact-item {
+        min-width: auto;
+        padding: var(--spacing-2xl);
+    }
+}
+
+/* ============================================
+   LARGE SCREENS (min-width: 1400px)
+   ============================================ */
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .gallery,
+    .featured-works {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}

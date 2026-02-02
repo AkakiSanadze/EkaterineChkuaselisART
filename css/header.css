@@ -1,0 +1,215 @@
+/**
+ * Header Styles
+ * This file contains styles for the site header and navigation
+ */
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+header {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-4xl);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ============================================
+   LOGO
+   ============================================ */
+
+.logo {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.logo:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+}
+
+.logo h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.logo:hover h1 {
+    color: var(--color-primary);
+}
+
+.logo:focus-visible h1 {
+    color: var(--color-primary);
+}
+
+.logo p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: var(--spacing-3xl);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color var(--transition-fast);
+    position: relative;
+    padding: 4px 0;
+}
+
+nav ul li a:hover {
+    color: var(--color-primary);
+}
+
+nav ul li a:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+    color: var(--color-primary);
+}
+
+/* Current page indicator */
+nav ul li a[aria-current="page"] {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+nav ul li a[aria-current="page"]::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--color-primary);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width var(--transition-fast);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Skip link for navigation */
+.skip-nav {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 10001;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    transition: top 0.3s ease;
+}
+
+.skip-nav:focus {
+    top: 10px;
+}
+
+/* ============================================
+   LANGUAGE SWITCHER
+   ============================================ */
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-left: var(--spacing-xl);
+    padding-left: var(--spacing-xl);
+    border-left: 1px solid var(--color-border);
+}
+
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 28px;
+    padding: 4px 8px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-text-light);
+    background-color: transparent;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.lang-btn:hover {
+    color: var(--color-primary);
+    background-color: var(--color-background);
+}
+
+.lang-btn.active {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.lang-btn.active:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.lang-separator {
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+    user-select: none;
+}
+
+/* Responsive Language Switcher */
+@media (max-width: 768px) {
+    .language-switcher {
+        margin-left: var(--spacing-md);
+        padding-left: var(--spacing-md);
+    }
+    
+    .lang-btn {
+        min-width: 32px;
+        height: 24px;
+        padding: 2px 6px;
+        font-size: var(--font-size-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .language-switcher {
+        margin-left: var(--spacing-sm);
+        padding-left: var(--spacing-sm);
+    }
+}

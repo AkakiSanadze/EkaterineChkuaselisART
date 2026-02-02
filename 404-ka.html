@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>გვერდი ვერ მოიძებნა | ეკატერინე ჭყუასელის ხელოვნება</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="გვერდი ვერ მოიძებნა. გაეცანით ეკატერინე ჭყუასელის ხელოვნებას, თანამედროვე მხატვრის ნამუშევრებს თბილისიდან, საქართველო.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ekaterinechkuaseli.art/404-ka.html">
+    
+    <!-- Alternate Language Versions -->
+    <link rel="alternate" hreflang="en" href="https://ekaterinechkuaseli.art/404.html">
+    <link rel="alternate" hreflang="ka" href="https://ekaterinechkuaseli.art/404-ka.html">
+    <link rel="alternate" hreflang="ru" href="https://ekaterinechkuaseli.art/404-ru.html">
+    <link rel="alternate" hreflang="x-default" href="https://ekaterinechkuaseli.art/404.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* 404 Page Specific Styles */
+        .error-page {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-4xl) 0;
+            background: linear-gradient(135deg, var(--color-background) 0%, var(--color-white) 100%);
+        }
+
+        .error-container {
+            text-align: center;
+            max-width: 600px;
+            padding: var(--spacing-4xl);
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.8;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .error-icon {
+            font-size: 80px;
+            color: var(--color-primary-light);
+            margin-bottom: var(--spacing-xl);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .error-title {
+            font-size: var(--font-size-4xl);
+            margin-bottom: var(--spacing-lg);
+            color: var(--color-text);
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .error-message {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-3xl);
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .error-actions {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+            animation: fadeInUp 0.8s ease-out 0.5s both;
+        }
+
+        .error-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            justify-content: center;
+        }
+
+        .error-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            padding: 14px 28px;
+            border-radius: var(--radius-lg);
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .error-btn.primary {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .error-btn.primary:hover {
+            background-color: var(--color-primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .error-btn.secondary {
+            background-color: var(--color-white);
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+
+        .error-btn.secondary:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        /* Search Box */
+        .error-search {
+            margin-top: var(--spacing-xl);
+        }
+
+        .error-search h3 {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-md);
+            color: var(--color-text);
+        }
+
+        .search-box {
+            display: flex;
+            gap: var(--spacing-sm);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid var(--color-primary-light);
+            border-radius: var(--radius-lg);
+            font-size: var(--font-size-base);
+            font-family: var(--font-family-primary);
+            transition: border-color var(--transition-fast);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+
+        .search-box button {
+            padding: 12px 20px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--radius-lg);
+            cursor: pointer;
+            font-size: var(--font-size-base);
+            transition: background-color var(--transition-fast);
+        }
+
+        .search-box button:hover {
+            background-color: var(--color-primary-dark);
+        }
+
+        /* Quick Links */
+        .quick-links {
+            margin-top: var(--spacing-3xl);
+            padding-top: var(--spacing-3xl);
+            border-top: 1px solid var(--color-background);
+        }
+
+        .quick-links h3 {
+            font-size: var(--font-size-base);
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .quick-links-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-md);
+            justify-content: center;
+        }
+
+        .quick-links-list a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-size: var(--font-size-base);
+            transition: color var(--transition-fast);
+        }
+
+        .quick-links-list a:hover {
+            color: var(--color-primary-dark);
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 0.8;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 80px;
+            }
+
+            .error-icon {
+                font-size: 60px;
+            }
+
+            .error-title {
+                font-size: var(--font-size-3xl);
+            }
+
+            .error-container {
+                padding: var(--spacing-xl);
+            }
+
+            .error-buttons {
+                flex-direction: column;
+            }
+
+            .error-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">ძირითად შინაარსზე გადასვლა</a>
+    
+    <!-- Header -->
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <a href="index-ka.html" class="logo" aria-label="ეკატერინე ჭყუასელის ხელოვნება - მთავარი">
+                    <h1>ეკატერინე ჭყუასელის ხელოვნება</h1>
+                    <p>მხატვარი • თბილისი, საქართველო</p>
+                </a>
+                <nav role="navigation" aria-label="მთავარი ნავიგაცია">
+                    <ul>
+                        <li><a href="gallery-ka.html">გალერეა</a></li>
+                        <li><a href="about-ka.html">ჩემს შესახებ</a></li>
+                        <li><a href="contact-ka.html">კონტაქტი</a></li>
+                    </ul>
+                </nav>
+                <!-- Language Switcher -->
+                <div class="language-switcher" aria-label="ენის შეცვლა">
+                    <a href="404.html" class="lang-btn" data-lang="en" aria-label="English">EN</a>
+                    <span class="lang-separator">|</span>
+                    <a href="404-ka.html" class="lang-btn active" data-lang="ka" aria-label="ქართული" aria-current="true">GE</a>
+                    <span class="lang-separator">|</span>
+                    <a href="404-ru.html" class="lang-btn" data-lang="ru" aria-label="რუსული">RU</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="error-page" aria-labelledby="error-title">
+            <div class="error-container">
+                <div class="error-code">404</div>
+                <div class="error-icon">
+                    <i class="fas fa-paint-brush" aria-hidden="true"></i>
+                </div>
+                <h1 class="error-title" id="error-title">გვერდი ვერ მოიძებნა</h1>
+                <p class="error-message">
+                    უპს! გვერდი, რომელსაც ეძებთ, ფერწერასავით გაქრა. 
+                    არ ინერვიულოთ, ჩვენს გალერეაში ბევრი მშვენიერი ნამუშევარია.
+                </p>
+                
+                <div class="error-actions">
+                    <div class="error-buttons">
+                        <a href="index-ka.html" class="error-btn primary">
+                            <i class="fas fa-home" aria-hidden="true"></i>
+                            მთავარზე დაბრუნება
+                        </a>
+                        <a href="gallery-ka.html" class="error-btn secondary">
+                            <i class="fas fa-images" aria-hidden="true"></i>
+                            გალერეის ნახვა
+                        </a>
+                    </div>
+                    
+                    <!-- Search Box -->
+                    <div class="error-search">
+                        <h3>ნამუშევრის ძიება</h3>
+                        <form class="search-box" action="gallery-ka.html" method="get">
+                            <input 
+                                type="text" 
+                                name="search" 
+                                placeholder="ნამუშევრების ძიება..." 
+                                aria-label="ნამუშევრების ძიება"
+                                required
+                            >
+                            <button type="submit" aria-label="ძიება">
+                                <i class="fas fa-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <h3>პოპულარული გვერდები</h3>
+                    <nav class="quick-links-list" aria-label="სწრაფი ბმულები">
+                        <a href="gallery-ka.html?filter=oil">ზეთის სურათები</a>
+                        <a href="gallery-ka.html?filter=ink">მელნის ნახატები</a>
+                        <a href="gallery-ka.html?filter=pastel">პასტელი</a>
+                        <a href="gallery-ka.html?filter=mixed">შერეული ტექნიკა</a>
+                        <a href="about-ka.html">მხატვრის შესახებ</a>
+                        <a href="contact-ka.html">კონტაქტი</a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->     
+    <footer role="contentinfo">         
+        <div class="container">             
+            <div class="footer-content">                 
+                <div class="footer-sections">                     
+                    <div class="footer-section">                         
+                        <h4>ნავიგაცია</h4>                         
+                        <ul class="footer-links">                             
+                            <li><a href="index-ka.html">მთავარი</a></li>                             
+                            <li><a href="gallery-ka.html">გალერეა</a></li>                             
+                            <li><a href="about-ka.html">ჩემს შესახებ</a></li>                             
+                            <li><a href="contact-ka.html">კონტაქტი</a></li>                         
+                        </ul>                     
+                    </div>                     
+                    <div class="footer-section">                          
+                        <h4>კონტაქტი</h4>                         
+                        <p class="footer-contact">თბილისი, საქართველო</p>                         
+                        <p class="footer-contact"><a href="mailto:chkuaseli.eka@gmail.com">chkuaseli.eka@gmail.com</a></p>
+                    </div>                     
+                    <div class="footer-section">                         
+                        <h4>ხელოვნების კატეგორიები</h4>                         
+                        <ul class="footer-links">                             
+                            <li><a href="gallery-ka.html?filter=oil">ზეთის სურათები</a></li>                             
+                            <li><a href="gallery-ka.html?filter=ink">მელნის ნახატები</a></li>
+                            <li><a href="gallery-ka.html?filter=pastel">პასტელი</a></li>                             
+                            <li><a href="gallery-ka.html?filter=mixed">შერეული ტექნიკა</a></li>                         
+                        </ul>                     
+                    </div>                 
+                </div>                 
+                <div class="copyright">                     
+                    © 2025 ეკატერინე ჭყუასელის ხელოვნება. ყველა უფლება დაცულია.                 
+                </div>             
+            </div>         
+        </div>     
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="ზემოთ დაბრუნება">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    
+    <!-- JavaScript Files -->
+    <script src="js/i18n.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Handle search form submission
+        document.querySelector('.search-box').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const searchTerm = this.querySelector('input').value.trim();
+            if (searchTerm) {
+                window.location.href = `gallery-ka.html?search=${encodeURIComponent(searchTerm)}`;
+            }
+        });
+    </script>
+</body>
+</html>
