@@ -14,7 +14,7 @@ const ARTWORKS_DATA = {
       "image": "images/dancer.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "22x31cm",
       "year": 0
@@ -27,7 +27,7 @@ const ARTWORKS_DATA = {
       "image": "images/a dancer in a black dress.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "22x31cm",
       "year": 0
@@ -40,7 +40,7 @@ const ARTWORKS_DATA = {
       "image": "images/freeze oil on canvas.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "30x45cm",
       "year": 0
@@ -53,7 +53,7 @@ const ARTWORKS_DATA = {
       "image": "images/girl bird oil on canvas.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "30x45cm",
       "year": 2008
@@ -66,7 +66,7 @@ const ARTWORKS_DATA = {
       "image": "images/spring.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "30x45cm",
       "year": 2008
@@ -79,7 +79,7 @@ const ARTWORKS_DATA = {
       "image": "images/still-life.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "20x70cm",
       "year": 0
@@ -92,7 +92,7 @@ const ARTWORKS_DATA = {
       "image": "images/Ginger Color.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "45x35cm",
       "year": 2005
@@ -131,7 +131,7 @@ const ARTWORKS_DATA = {
       "image": "images/angel.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "29x21cm",
       "year": 0
@@ -144,7 +144,7 @@ const ARTWORKS_DATA = {
       "image": "images/dance.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "21x29cm",
       "year": 0
@@ -157,7 +157,7 @@ const ARTWORKS_DATA = {
       "image": "images/summer.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "15x27cm",
       "year": 0
@@ -170,7 +170,7 @@ const ARTWORKS_DATA = {
       "image": "images/masquerade.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "29x39cm",
       "year": 0
@@ -183,7 +183,7 @@ const ARTWORKS_DATA = {
       "image": "images/grandfathers-cat.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "15x20cm",
       "year": 0
@@ -196,7 +196,7 @@ const ARTWORKS_DATA = {
       "image": "images/A walk with the lambs.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "29x38cm",
       "year": 0
@@ -209,7 +209,7 @@ const ARTWORKS_DATA = {
       "image": "images/Still Life.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "45x60cm",
       "year": 2011
@@ -222,7 +222,7 @@ const ARTWORKS_DATA = {
       "image": "images/sheep.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "40x60cm",
       "year": 0
@@ -235,7 +235,7 @@ const ARTWORKS_DATA = {
       "image": "images/Missing.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "30x45cm",
       "year": 0
@@ -248,7 +248,7 @@ const ARTWORKS_DATA = {
       "image": "images/home-tbilisi-private-collection.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x25cm",
       "year": 2009
@@ -261,7 +261,7 @@ const ARTWORKS_DATA = {
       "image": "images/black-white.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x54cm",
       "year": 2012
@@ -274,7 +274,7 @@ const ARTWORKS_DATA = {
       "image": "images/Story.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x30cm",
       "year": 2012
@@ -287,7 +287,7 @@ const ARTWORKS_DATA = {
       "image": "images/fisherman.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x30cm",
       "year": 2012
@@ -300,7 +300,7 @@ const ARTWORKS_DATA = {
       "image": "images/free-fall.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x30cm",
       "year": 2012
@@ -313,7 +313,7 @@ const ARTWORKS_DATA = {
       "image": "images/everything.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x25cm",
       "year": 2012
@@ -326,7 +326,7 @@ const ARTWORKS_DATA = {
       "image": "images/landscape.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x25cm",
       "year": 2012
@@ -339,7 +339,7 @@ const ARTWORKS_DATA = {
       "image": "images/marionette.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x30cm",
       "year": 2012
@@ -352,7 +352,7 @@ const ARTWORKS_DATA = {
       "image": "images/Zebra.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x30cm",
       "year": 2008
@@ -365,7 +365,7 @@ const ARTWORKS_DATA = {
       "image": "images/walking.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x30cm",
       "year": 2012
@@ -378,7 +378,7 @@ const ARTWORKS_DATA = {
       "image": "images/Toyfish.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x30cm",
       "year": 2012
@@ -391,7 +391,7 @@ const ARTWORKS_DATA = {
       "image": "images/One-two-three-four.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "20x60cm",
       "year": 2012
@@ -404,7 +404,7 @@ const ARTWORKS_DATA = {
       "image": "images/Bringing-to-you.jpg",
       "category": "ink",
       "technique": "Ink",
-      "technique_ka": "მელანი",
+      "technique_ka": "ტუში",
       "technique_ru": "Тушь",
       "size": "30x40cm",
       "year": 2011
@@ -573,7 +573,7 @@ const ARTWORKS_DATA = {
       "image": "images/Flowers.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "60x80cm",
       "year": 2003
@@ -586,7 +586,7 @@ const ARTWORKS_DATA = {
       "image": "images/My-Green-Space.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "60x60cm",
       "year": 2008
@@ -599,7 +599,7 @@ const ARTWORKS_DATA = {
       "image": "images/We.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "30x30cm",
       "year": 2008
@@ -612,7 +612,7 @@ const ARTWORKS_DATA = {
       "image": "images/the-bird.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "50x60cm",
       "year": 2008
@@ -625,7 +625,7 @@ const ARTWORKS_DATA = {
       "image": "images/blindly-spring.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "30x40cm",
       "year": 2008
@@ -638,7 +638,7 @@ const ARTWORKS_DATA = {
       "image": "images/Dream.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "40x50cm",
       "year": 2008
@@ -651,7 +651,7 @@ const ARTWORKS_DATA = {
       "image": "images/still-life2.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "35x50cm",
       "year": 2008
@@ -664,7 +664,7 @@ const ARTWORKS_DATA = {
       "image": "images/with-crane.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "50x60cm",
       "year": 2008
@@ -677,7 +677,7 @@ const ARTWORKS_DATA = {
       "image": "images/the-flowers.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "40x50cm",
       "year": 2008
@@ -690,7 +690,7 @@ const ARTWORKS_DATA = {
       "image": "images/doll-5.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "20x25cm",
       "year": 2005
@@ -703,7 +703,7 @@ const ARTWORKS_DATA = {
       "image": "images/doll-1.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "25x30cm",
       "year": 2005
@@ -716,7 +716,7 @@ const ARTWORKS_DATA = {
       "image": "images/doll-2.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "25x30cm",
       "year": 2005
@@ -729,7 +729,7 @@ const ARTWORKS_DATA = {
       "image": "images/doll-4.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "45x67cm",
       "year": 2005
@@ -742,7 +742,7 @@ const ARTWORKS_DATA = {
       "image": "images/doll-3.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "45x65cm",
       "year": 2005
@@ -755,7 +755,7 @@ const ARTWORKS_DATA = {
       "image": "images/doll-6.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "45x67cm",
       "year": 2005
@@ -768,7 +768,7 @@ const ARTWORKS_DATA = {
       "image": "images/folk-instruments.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "20x35cm",
       "year": 2005
@@ -781,7 +781,7 @@ const ARTWORKS_DATA = {
       "image": "images/Jester.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "40x60cm",
       "year": 2005
@@ -794,7 +794,7 @@ const ARTWORKS_DATA = {
       "image": "images/Hedgehog.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "50x70cm",
       "year": 2005
@@ -807,7 +807,7 @@ const ARTWORKS_DATA = {
       "image": "images/Cuca.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "70x100cm",
       "year": 2005
@@ -820,7 +820,7 @@ const ARTWORKS_DATA = {
       "image": "images/Tree.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "40x60cm",
       "year": 2005
@@ -833,7 +833,7 @@ const ARTWORKS_DATA = {
       "image": "images/tojina.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "90x90cm",
       "year": 2005
@@ -846,7 +846,7 @@ const ARTWORKS_DATA = {
       "image": "images/Thought.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "45x65cm",
       "year": 2005
@@ -859,7 +859,7 @@ const ARTWORKS_DATA = {
       "image": "images/still-life-moscow-private-collection.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "40x60cm",
       "year": 2005
@@ -872,7 +872,7 @@ const ARTWORKS_DATA = {
       "image": "images/Winter1.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "35x55cm",
       "year": 2005
@@ -885,7 +885,7 @@ const ARTWORKS_DATA = {
       "image": "images/One-two-three.jpg",
       "category": "oil",
       "technique": "Oil on Canvas",
-      "technique_ka": "ზეთი ტილოზე",
+      "technique_ka": "ზეთი, ტილო",
       "technique_ru": "Масло на холсте",
       "size": "35x50cm",
       "year": 2005
