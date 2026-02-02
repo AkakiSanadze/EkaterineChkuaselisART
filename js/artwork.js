@@ -3,7 +3,7 @@
  * Handles loading artwork details, navigation, social sharing, and similar works
  */
 
-(function() {
+(function () {
     'use strict';
 
     // Artwork database - contains all artwork information
@@ -170,6 +170,26 @@
         if (metaDesc) {
             metaDesc.content = `${currentArtwork.title} - ${currentArtwork.technique}, ${currentArtwork.size}. ${currentArtwork.description}`;
         }
+
+        // Helper to update meta tags
+        const updateMeta = (selector, value) => {
+            const el = document.querySelector(selector);
+            if (el) el.setAttribute('content', value);
+        };
+
+        const absUrl = window.location.href;
+        const absImage = window.location.origin + '/' + currentArtwork.image;
+
+        // Update Open Graph tags
+        updateMeta('meta[property="og:title"]', `${currentArtwork.title} | Ekaterine Chkuaseli's Art`);
+        updateMeta('meta[property="og:description"]', currentArtwork.description);
+        updateMeta('meta[property="og:image"]', absImage);
+        updateMeta('meta[property="og:url"]', absUrl);
+
+        // Update Twitter tags
+        updateMeta('meta[name="twitter:title"]', `${currentArtwork.title} | Ekaterine Chkuaseli's Art`);
+        updateMeta('meta[name="twitter:description"]', currentArtwork.description);
+        updateMeta('meta[name="twitter:image"]', absImage);
 
         // Load image
         if (artworkImage) {
