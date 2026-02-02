@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Gallery | Ekaterine Chkuaseli's Art</title>
-    
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Browse the complete gallery of Ekaterine Chkuaseli's artwork. Oil paintings, ink drawings, pastel works, and mixed media from a contemporary Georgian artist.">
-    <meta name="keywords" content="Ekaterine Chkuaseli, art gallery, oil paintings, ink drawings, pastel art, mixed media, Georgian artist, contemporary art, Tbilisi">
+    <meta name="description"
+        content="Browse the complete gallery of Ekaterine Chkuaseli's artwork. Oil paintings, ink drawings, pastel works, and mixed media from a contemporary Georgian artist.">
+    <meta name="keywords"
+        content="Ekaterine Chkuaseli, art gallery, oil paintings, ink drawings, pastel art, mixed media, Georgian artist, contemporary art, Tbilisi">
     <meta name="author" content="Ekaterine Chkuaseli">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ekaterinechkuaseli.art/gallery.html">
-    
+
     <!-- Alternate Language Versions -->
     <link rel="alternate" hreflang="en" href="https://ekaterinechkuaseli.art/gallery.html">
     <link rel="alternate" hreflang="ka" href="https://ekaterinechkuaseli.art/gallery-ka.html">
     <link rel="alternate" hreflang="ru" href="https://ekaterinechkuaseli.art/gallery-ru.html">
     <link rel="alternate" hreflang="x-default" href="https://ekaterinechkuaseli.art/gallery.html">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Art Gallery | Ekaterine Chkuaseli's Art">
-    <meta property="og:description" content="Browse the complete gallery of Ekaterine Chkuaseli's artwork. Oil paintings, ink drawings, pastel works, and mixed media from a contemporary Georgian artist.">
+    <meta property="og:description"
+        content="Browse the complete gallery of Ekaterine Chkuaseli's artwork. Oil paintings, ink drawings, pastel works, and mixed media from a contemporary Georgian artist.">
     <meta property="og:image" content="https://ekaterinechkuaseli.art/images/EkaterineChkuaseli.jpg">
     <meta property="og:url" content="https://ekaterinechkuaseli.art/gallery.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ekaterine Chkuaseli's Art">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Art Gallery | Ekaterine Chkuaseli's Art">
-    <meta name="twitter:description" content="Browse the complete gallery of Ekaterine Chkuaseli's artwork. Oil paintings, ink drawings, pastel works, and mixed media from a contemporary Georgian artist.">
+    <meta name="twitter:description"
+        content="Browse the complete gallery of Ekaterine Chkuaseli's artwork. Oil paintings, ink drawings, pastel works, and mixed media from a contemporary Georgian artist.">
     <meta name="twitter:image" content="https://ekaterinechkuaseli.art/images/EkaterineChkuaseli.jpg">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/reset.css">
@@ -48,14 +53,15 @@
     <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
     <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
-    
+
     <!-- Header -->
     <header role="banner">
         <div class="container">
@@ -73,7 +79,8 @@
                 </nav>
                 <!-- Language Switcher -->
                 <div class="language-switcher" aria-label="Language selection">
-                    <a href="gallery.html" class="lang-btn active" data-lang="en" aria-label="English" aria-current="true">EN</a>
+                    <a href="gallery.html" class="lang-btn active" data-lang="en" aria-label="English"
+                        aria-current="true">EN</a>
                     <span class="lang-separator">|</span>
                     <a href="gallery-ka.html" class="lang-btn" data-lang="ka" aria-label="Georgian">GE</a>
                     <span class="lang-separator">|</span>
@@ -82,7 +89,7 @@
             </div>
         </div>
     </header>
-    
+
     <!-- Main Content -->
     <main id="main-content">
         <!-- Page Title -->
@@ -92,11 +99,11 @@
                 <p>A collection of artwork</p>
             </div>
         </section>
-        
+
         <!-- Gallery -->
         <section class="container" aria-labelledby="gallery-heading">
             <h2 id="gallery-heading" class="sr-only">Artwork Gallery</h2>
-            
+
             <!-- Breadcrumbs -->
             <nav class="breadcrumbs" aria-label="Breadcrumb navigation">
                 <ol>
@@ -104,23 +111,24 @@
                     <li aria-current="page">Gallery</li>
                 </ol>
             </nav>
-            
+
             <!-- Gallery Controls -->
             <div class="gallery-controls">
                 <!-- Search Bar -->
                 <div class="gallery-search">
                     <div class="search-input-wrapper">
                         <i class="fas fa-search search-icon" aria-hidden="true"></i>
-                        <input type="text" id="gallery-search" placeholder="Search by title, technique, or year..." aria-label="Search artworks">
+                        <input type="text" id="gallery-search" placeholder="Search by title, technique, or year..."
+                            aria-label="Search artworks">
                         <button class="search-clear" id="search-clear" aria-label="Clear search" style="display: none;">
                             <i class="fas fa-times" aria-hidden="true"></i>
                         </button>
                     </div>
                 </div>
-                
+
 
             </div>
-            
+
             <!-- Active Filters Display -->
             <div class="active-filters" id="active-filters" style="display: none;">
                 <span class="active-filters-label">Active filters:</span>
@@ -130,10 +138,11 @@
                     Clear All
                 </button>
             </div>
-            
+
             <!-- Filter Buttons with Counters -->
             <div class="gallery-menu" role="tablist" aria-label="Filter artworks by category">
-                <button class="active" data-filter="all" role="tab" aria-selected="true" aria-controls="gallery-grid" id="filter-all">
+                <button class="active" data-filter="all" role="tab" aria-selected="true" aria-controls="gallery-grid"
+                    id="filter-all">
                     All Works
                     <span class="filter-count" id="count-all">0</span>
                 </button>
@@ -145,85 +154,89 @@
                     Ink Drawings
                     <span class="filter-count" id="count-ink">0</span>
                 </button>
-                <button data-filter="pastel" role="tab" aria-selected="false" aria-controls="gallery-grid" id="filter-pastel">
+                <button data-filter="pastel" role="tab" aria-selected="false" aria-controls="gallery-grid"
+                    id="filter-pastel">
                     Pastel
                     <span class="filter-count" id="count-pastel">0</span>
-                </button> 
-                <button data-filter="mixed" role="tab" aria-selected="false" aria-controls="gallery-grid" id="filter-mixed">
+                </button>
+                <button data-filter="mixed" role="tab" aria-selected="false" aria-controls="gallery-grid"
+                    id="filter-mixed">
                     Mixed Media
                     <span class="filter-count" id="count-mixed">0</span>
                 </button>
             </div>
-            
+
             <!-- Loading Spinner -->
             <div class="gallery-loading" id="gallery-loading" style="display: none;">
                 <div class="loading-spinner"></div>
                 <p>Loading artworks...</p>
             </div>
-            
+
             <!-- Gallery Grid -->
             <div class="gallery" id="gallery-grid" role="region" aria-label="Artwork collection" tabindex="0">
                 <!-- Artworks will be loaded dynamically from JSON -->
-            
+
                 <!-- No Results Message -->
                 <div class="no-results" id="no-results" style="display: none;">
                     <i class="fas fa-search" aria-hidden="true"></i>
                     <h3>No results found</h3>
                     <p>Try adjusting your search or filters</p>
                 </div>
-            
+
                 <!-- Load More Button -->
                 <div class="load-more-container" id="load-more-container">
                     <button class="load-more-btn" id="load-more-btn">
                         <span class="load-more-text">Load More</span>
-                        <span class="load-more-count">(<span id="loaded-count">0</span> of <span id="total-count">0</span>)</span>
+                        <span class="load-more-count">(<span id="loaded-count">0</span> of <span
+                                id="total-count">0</span>)</span>
                     </button>
                 </div>
             </div>
         </section>
     </main>
-    
-    <!-- Footer -->     
-    <footer role="contentinfo">         
-        <div class="container">             
-            <div class="footer-content">                 
-                <div class="footer-sections">                     
-                    <div class="footer-section">                         
-                        <h4>Navigation</h4>                         
-                        <ul class="footer-links">                             
-                            <li><a href="index.html">Home</a></li>                             
-                            <li><a href="gallery.html" aria-current="page">Gallery</a></li>                             
-                            <li><a href="about.html">About</a></li>                             
-                            <li><a href="contact.html">Contact</a></li>                         
-                        </ul>                     
-                    </div>                     
-                    <div class="footer-section">                         
-                        <h4>Contact</h4>                         
-                        <p class="footer-contact">Tbilisi, Georgia</p>                         
-                        <p class="footer-contact"><a href="mailto:chkuaseli.eka@gmail.com">chkuaseli.eka@gmail.com</a></p>
-                    </div>                     
-                    <div class="footer-section">                         
-                        <h4>Art Categories</h4>                         
-                        <ul class="footer-links">                             
-                            <li><a href="gallery.html?filter=oil">Oil Paintings</a></li>                             
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-sections">
+                    <div class="footer-section">
+                        <h4>Navigation</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Contact</h4>
+                        <p class="footer-contact">Tbilisi, Georgia</p>
+                        <p class="footer-contact"><a href="mailto:chkuaseli.eka@gmail.com">chkuaseli.eka@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Art Categories</h4>
+                        <ul class="footer-links">
+                            <li><a href="gallery.html?filter=oil">Oil Paintings</a></li>
                             <li><a href="gallery.html?filter=ink">Ink Drawings</a></li>
-                            <li><a href="gallery.html?filter=pastel">Pastel Drawings</a></li>                             
-                            <li><a href="gallery.html?filter=mixed">Mixed Media</a></li>                         
-                        </ul>                     
-                    </div>                 
-                </div>                 
-                <div class="copyright">                     
-                    &copy; 2025 Ekaterine Chkuaseli's Art. All rights reserved.                 
-                </div>             
-            </div>         
-        </div>     
+                            <li><a href="gallery.html?filter=pastel">Pastel Drawings</a></li>
+                            <li><a href="gallery.html?filter=mixed">Mixed Media</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Ekaterine Chkuaseli's Art. All rights reserved.
+                </div>
+            </div>
+        </div>
     </footer>
-    
+
     <!-- Back to Top Button -->
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
-    
+
     <!-- Lightbox -->
     <div class="lightbox" role="dialog" aria-modal="true" aria-label="Artwork viewer" tabindex="-1">
         <button class="lightbox-close" aria-label="Close artwork viewer">
@@ -247,14 +260,16 @@
             <p class="lightbox-details"></p>
         </div>
     </div>
-    
+
     <!-- Data Files -->
     <script src="data/artworks.js"></script>
-    
+
     <!-- JavaScript Files -->
+    <script src="js/i18n.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/lazyload.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
