@@ -563,50 +563,51 @@
         setLanguage(lang);
         updateSwitcherUI();
 
-        // Get current page filename
-        const currentPath = window.location.pathname;
-        const currentFile = currentPath.split('/').pop() || 'index.html';
+        // Get current path
+        const path = window.location.pathname;
+        let filename = path.split('/').pop();
 
-        // Determine target page
-        let targetFile;
-
-        // Extract base name without language suffix
-        let baseName = currentFile;
-        if (currentFile.endsWith('-ka.html')) {
-            baseName = currentFile.replace('-ka.html', '.html');
-        } else if (currentFile.endsWith('-ru.html')) {
-            baseName = currentFile.replace('-ru.html', '.html');
+        // Handle root path
+        if (!filename || filename === '/') {
+            filename = 'index.html';
         }
 
-        if (lang === 'ka') {
-            // Switch to Georgian version
-            if (baseName === 'index.html') {
-                targetFile = 'index-ka.html';
-            } else if (baseName.endsWith('.html')) {
-                targetFile = baseName.replace('.html', '-ka.html');
-            } else {
-                targetFile = baseName + '-ka.html';
-            }
-        } else if (lang === 'ru') {
-            // Switch to Russian version
-            if (baseName === 'index.html') {
-                targetFile = 'index-ru.html';
-            } else if (baseName.endsWith('.html')) {
-                targetFile = baseName.replace('.html', '-ru.html');
-            } else {
-                targetFile = baseName + '-ru.html';
-            }
+        // Detect extension
+        const hasHtmlExt = filename.endsWith('.html');
+        let baseFilename = hasHtmlExt ? filename.slice(0, -5) : filename;
+
+        // Strip existing language suffix
+        if (baseFilename.endsWith('-ka')) {
+            baseFilename = baseFilename.slice(0, -3);
+        } else if (baseFilename.endsWith('-ru')) {
+            baseFilename = baseFilename.slice(0, -3);
+        }
+
+        // Construct new filename
+        let newFilename = baseFilename;
+        if (lang !== 'en') {
+            newFilename += `-${lang}`;
+        }
+
+        // Add extension back if it existed or if we are constructing a known file path
+        // For root 'index', we typically want index-ka.html or just index-ka depending on server
+        // Safest is to keep extension if original had it, or append if it's index and we are client-side routing to file
+        if (hasHtmlExt) {
+            newFilename += '.html';
         } else {
-            // Switch to English version
-            targetFile = baseName;
+            // If Clean URL, we respect that, but effectively we are navigating to another resource.
+            // If we are at /about (base=about), going to ka -> /about-ka
+            // If we are at / (base=index), going to ka -> /index-ka (which usually translates to index-ka.html on server)
         }
+
+        // Replace the last part of the path
+        const newPath = path.substring(0, path.lastIndexOf('/') + 1) + newFilename;
 
         // Preserve query parameters
         const queryString = window.location.search;
-        const targetUrl = targetFile + queryString;
 
-        // Navigate to target page
-        window.location.href = targetUrl;
+        // Navigate
+        window.location.href = newPath + queryString;
     };
 
     /**
