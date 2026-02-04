@@ -776,7 +776,7 @@ const ARTWORKS_DATA = {
     {
       "id": "jester",
       "title": "Jester",
-      "title_ka": "ჯოჯოხეთი",
+      "title_ka": "მასხარა",
       "title_ru": "Шут",
       "image": "images/Jester.jpg",
       "category": "oil",
